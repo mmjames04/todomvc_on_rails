@@ -1,6 +1,6 @@
 Todos::Application.routes.draw do
   get "tweets/new"
-  get "tweets/create"
+  get "tweets/create", to: redirect('/')
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
@@ -11,6 +11,8 @@ Todos::Application.routes.draw do
   resources :users
 
   resources :sessions, only: [:create, :destroy]
+
+  resources :tweets, only: [:new, :create]
 
   resources :todos do
     member do

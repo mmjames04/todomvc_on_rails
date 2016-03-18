@@ -27,6 +27,6 @@ Todos::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.twitter_key = ENV["TWITTER_KEY"]
-  config.twitter_secret = ENV["TWITTER_SECRET"]
+  config.twitter_key = "NvWTam3fU9bHqPbCEj8bT301y"
+  config.twitter_secret = "k7SSTIOcNvuCiffGFbpN3SQS9EnLq5lnvoKAlCuCCq54qPbBDV"
 end

@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   def new
+  	@todo = Todo.find_by(:id => params[:message])
   end
 
   def create

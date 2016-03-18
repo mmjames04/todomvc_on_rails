@@ -2,7 +2,13 @@
   <div class="view">
     <%= form_for(todo, url: toggle_todo_path(todo), method: :post, remote: true) do |f| %>
       <%= f.check_box :completed, class: "toggle", "data-behavior" => "submit_on_check" %>
+      <% if current_user %>
+        <%= link_to image_tag('twitter-bird.jpg'), new_tweet_path(:message => todo), class: "tweets_new", style: "display:none;"%>
+      <% end %>
     <% end %>
+    <div id="tweets_new" style="display:none;">
+          <%= render :partial => 'tweets_new' %>
+    </div>
     <label data-behavior="todo_title"><%= todo.title %></label>
     <%= form_for(todo, method: :delete, remote: true) do |f| %>
       <button type="submit" class="destroy"></button>

@@ -20,3 +20,13 @@
  #current_user {
  	margin-top: 5px;
  }
+
+ .tweets_new {
+ 	float:right;
+ 	width:5em;
+ 	margin-right: 1em;
+ }
+
+ .tweets_new img {
+ 	height: 2em;
+ }

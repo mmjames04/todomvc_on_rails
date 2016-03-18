@@ -49,6 +49,7 @@ $(document).on "keypress", "[data-behavior~=submit_on_enter]", (e) ->
     e.preventDefault()
 
 $(document).on "click", "[data-behavior~=submit_on_check]", ->
+  $('.tweets_new').toggle()
   $(@).closest("form").submit()
 
 $(document).on "dblclick", "[data-behavior~=todo_title]", ->
