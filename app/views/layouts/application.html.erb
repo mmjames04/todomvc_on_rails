@@ -8,6 +8,21 @@
 </head>
 <body>
 
+<div>
+	<header>
+		<div id="current_user">
+			<% if current_user %>
+				<img id="profile_pic" src="<%= current_user.image %>">
+				Welcome <%= current_user.name %>!
+				<br/>
+				<%= link_to "Sign Out", signout_path %>
+			<% else %>
+				<%= link_to image_tag("twitter_button.png"), "/auth/twitter" %>
+			<% end %>
+		</div>
+	</header>
+</div>
+
 <%= yield %>
 
 </body>

@@ -28,6 +28,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
+gem 'omniauth-twitter'
+gem 'twitter'
+
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
