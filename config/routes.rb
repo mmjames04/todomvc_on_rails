@@ -14,6 +14,8 @@ Todos::Application.routes.draw do
 
   resources :tweets, only: [:new, :create]
 
+  resources :todos, only: :index
+
   resources :todos do
     member do
       post :toggle
